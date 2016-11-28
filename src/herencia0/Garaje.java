@@ -115,10 +115,10 @@ public class Garaje {
 	System.out.printf(formatH, "#  |", "Costos |", "Potencias |", "Vehículo |");
 	for(int i = 0; i < usedPlazas; i++) {
 	    if(potPlaza[i][0] != 0) {
-		System.out.printf(format, (i+1) + " |", "Bs. " + Costos[i][0] + " |", potPlaza[i][0] + "HP |", "Motos |");
+		System.out.printf(format, (i+1) + " |", "Bs. " + Costos[i][0] + " |", potPlaza[i][0] + " HP |", "Motos |");
 	    }
 	    if(potPlaza[i][1] != 0) {
-		System.out.printf(format, (i+1) + " |", "Bs. " + Costos[i][1] + " |", potPlaza[i][1] + "HP |", "Coches |");
+		System.out.printf(format, (i+1) + " |", "Bs. " + Costos[i][1] + " |", potPlaza[i][1] + " HP |", "Coches |");
 	    }
 	}
     }
