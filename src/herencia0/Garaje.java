@@ -23,10 +23,10 @@ public class Garaje {
 	Coche[] Coches = new Coche[numPlazas];
 	Moto[] Motos = new Moto[numPlazas];
 	
-	System.out.println("En el garaje hay un máximo de " + numPlazas + " plazas");
-	System.out.println("En cada plaza puede haber un coche o dos motos");
-	System.out.println("Acontinuación empezará el proceso de ingreso de vehículos a las plazas");
-	System.out.println("Para culminar con el proceso y pasar a la muestra de costos, ingrese \"0\" cuando sea ofertado");
+	System.out.println("En el garaje hay un máximo de " + numPlazas + " plazas.");
+	System.out.println("En cada plaza puede haber un coche o dos motos.");
+	System.out.println("Acontinuación empezará el proceso de ingreso de vehículos a las plazas.");
+	System.out.println("Para culminar con el proceso y pasar a la muestra de costos, ingrese \"0\".");
 	
 	for(int i = 0; i < numPlazas; i++) {
 	    potencia=0;
@@ -115,10 +115,10 @@ public class Garaje {
 	System.out.printf(formatH, "#  |", "Costos |", "Potencias |", "Vehículo |");
 	for(int i = 0; i < usedPlazas; i++) {
 	    if(potPlaza[i][0] != 0) {
-		System.out.printf(format, (i+1) + " |", "Bs. " + Costos[i][0] + " |", potPlaza[i][0] + " |", "Motos |");
+		System.out.printf(format, (i+1) + " |", "Bs. " + Costos[i][0] + " |", potPlaza[i][0] + "HP |", "Motos |");
 	    }
 	    if(potPlaza[i][1] != 0) {
-		System.out.printf(format, (i+1) + " |", "Bs. " + Costos[i][1] + " |", potPlaza[i][1] + " |", "Coches |");
+		System.out.printf(format, (i+1) + " |", "Bs. " + Costos[i][1] + " |", potPlaza[i][1] + "HP |", "Coches |");
 	    }
 	}
     }
@@ -134,15 +134,15 @@ public class Garaje {
     public double Cuota(double potencia1, double potencia2) {	// motos
 	double cuota;
 	if(potencia2!=0) {
-	    cuota = potencia1 * potencia2;
+	    cuota = potencia1 * potencia2; // cálculo de cuota si hay 2 motos
 	} else {
-	    cuota = potencia1 * 2;
+	    cuota = potencia1 * 2; // cálculo de cuota si hay 1 moto
 	}
 	return cuota;
     }
     
     public double Cuota(double potencia1) { // coches
-	double cuota = potencia1 * numPlazas;
+	double cuota = potencia1 * this.numPlazas; // cálculo de cuota si hay coche
 	return cuota;
     }
     
